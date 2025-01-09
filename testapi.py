@@ -7,7 +7,7 @@ HOST = 'localhost'
 PORT = 8050
 DB = 'raidtest'  # اسم قاعدة البيانات
 USER = 'rrmsz2@gmail.com'  # اسم المستخدم
-PASS = 'b88e53b090f730d5af42c1c1268c708b4c2c681c'  # كلمة المرور
+PASS = ''  # كلمة المرور
 
 # دالة لإرسال طلب JSON-RPC
 def json_rpc(url, method, params):
