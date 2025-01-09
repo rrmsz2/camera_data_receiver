@@ -1,0 +1,50 @@
+<odoo>
+    <record id="view_camera_data_tree" model="ir.ui.view">
+        <field name="name">camera.data.tree</field>
+        <field name="model">camera.data</field>
+        <field name="arch" type="xml">
+            <tree string="بيانات الكاميرات">
+                <field name="timestamp"/>
+                <field name="camera_id"/>
+                <field name="person_id"/>
+                <field name="confidence"/>
+                <field name="x"/>
+                <field name="y"/>
+                <field name="width"/>
+                <field name="height"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_camera_data_form" model="ir.ui.view">
+        <field name="name">camera.data.form</field>
+        <field name="model">camera.data</field>
+        <field name="arch" type="xml">
+            <form string="بيانات الكاميرات">
+                <sheet>
+                    <group>
+                        <field name="timestamp"/>
+                        <field name="camera_id"/>
+                        <field name="person_id"/>
+                        <field name="confidence"/>
+                    </group>
+                    <group>
+                        <field name="x"/>
+                        <field name="y"/>
+                        <field name="width"/>
+                        <field name="height"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_camera_data" model="ir.actions.act_window">
+        <field name="name">بيانات الكاميرات</field>
+        <field name="res_model">camera.data</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_camera_data_root" name="بيانات الكاميرات"/>
+    <menuitem id="menu_camera_data" parent="menu_camera_data_root" action="action_camera_data"/>
+</odoo>
